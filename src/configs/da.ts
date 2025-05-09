@@ -32,7 +32,7 @@ export async function getDaConfig(postData: { [key: string]: any }) {
       // No da provider and alt da enabled if using custom
 
       altda_deploy_config["use_altda"] = true;
-      altda_deploy_config["da_type"] = "";
+      altda_deploy_config["da_type"] = "custom";
 
       const customDA = await inquirer.prompt([
         {

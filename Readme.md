@@ -1,7 +1,6 @@
 <p align="center">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://upnode.org/static/746efe80b6fc0c3e8fe0326ce303ccfd/416c3/upnode.webp">
-      <img src="https://upnode.org/static/746efe80b6fc0c3e8fe0326ce303ccfd/416c3/upnode.webp" height="128">
+          <img src="./media/images/upnode_logo.png" height="188">
     </picture>
     <h1 align="center">UpRoll CLI Tool</h1>
     <h4 align="center">By Upnode</h4>
@@ -22,7 +21,7 @@ Deployment is handled through the CLI. After building your chain using the websi
  ```
 
 
-For deployment, UpRoll uses a fork of the [optimism package](https://github.com/zapper-95/optimism-package) which provides greater levels of customisation. Unlike Conduit, which is a paid, closed-source solution that relies on third-party managed servers, UpRoll CLI Tool is free, open-source, and allows developers to deploy OP Stack chains on their own infrastructure with full transparency.
+For deployment, UpRoll uses a fork of the [optimism package](https://github.com/upnodedev/optimism-package) which provides greater levels of customisation. Unlike Conduit, which is a paid, closed-source solution that relies on third-party managed servers, UpRoll CLI Tool is free, open-source, and allows developers to deploy OP Stack chains on their own infrastructure with full transparency.
 
 
 
@@ -55,7 +54,7 @@ npm update -g uproll-cli
 
 ## Creating and Deploying a Chain
 
-### Website + CLI
+### Option 1: Website + CLI
 
 Our website allows you to create and store rollup configurations, which can then be used for deployment via the CLI.
 
@@ -77,7 +76,7 @@ uproll deploy -i [config_id]
 Replace `config_id` with your chain's unique configuration ID.
 
 You will then be prompted for the project name. Once entered, the chain configuration will be deployed.
-### CLI Only
+### Option 2: CLI Only
 #### 1. Create a Rollup Configuration
 Run the following command:
 ```
@@ -166,7 +165,7 @@ If you no longer need to run any chains, use the following command to stop and r
 ### **Wallet Configuration**
 | Parameter | Description |
 |-----------|-------------|
-| **Enter the Deployer Private Key** | Private key of the contract deployer account |
+| **Enter the Deployer Private Key** | Private key of the contract deployer account. It will need funds on L1 to deploy contracts there |
 
 ### **Layer 1 Configuration**
 | Parameter | Description |
@@ -181,12 +180,12 @@ If you no longer need to run any chains, use the following command to stop and r
 ### **Signer Configuration**
 | Parameter | Description |
 |-----------|-------------|
-| **Enter the Batcher Private Key or Signer Endpoint** | Choose between a private key or a signer endpoint for the batcher |
-| **Enter the Sequencer Private Key or Signer Endpoint** | Choose between a private key or a signer endpoint for the sequencer |
-| **Enter the Proposer Private Key or Signer Endpoint** | Choose between a private key or a signer endpoint for the proposer |
-| **Enter the Challenger Private Key or Signer Endpoint** | Choose between a private key or a signer endpoint for the challenger |
+| **Enter the Batcher Private Key or Signer Endpoint** | Choose between a private key or a signer address and endpoint for the batcher |
+| **Enter the Sequencer Private Key or Signer Endpoint** | Choose between a private key or a signer address and endpoint for the sequencer |
+| **Enter the Proposer Private Key or Signer Endpoint** | Choose between a private key or a signer address and endpoint for the proposer |
+| **Enter the Challenger Private Key or Signer Endpoint** | Choose between a private key or a signer address and endpoint for the challenger |
 
-We proivde a [signer-proxy](https://github.com/upnodedev/signer-proxy) tool which can sign be used as a signer endpoint to sign transactions for any of these roles.
+We proivde a [signer-proxy](https://github.com/upnodedev/signer-proxy) tool which can sign be used as a signer endpoint to sign transactions for any of these roles. Instructions for setting up a signer address are also given there.
 
 
 ### **Rollup Configuration**
