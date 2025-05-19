@@ -3,7 +3,7 @@ import path from "path";
 
 export const CONFIG = {
   DEPLOYMENT_REPO: 'https://github.com/upnodedev/optimism-package.git',
-  DEPLOYMENT_REPO_HASH : 'c565daa4d2828193bba0f74239249ccb8cfe08aa',
+  DEPLOYMENT_REPO_HASH : 'b78d147641edec3b360dc4d2355df90cc8b090d5',
 };
 
 export const WEBSITE = {

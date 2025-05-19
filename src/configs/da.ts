@@ -26,7 +26,7 @@ export async function getDaConfig(postData: { [key: string]: any }) {
     
     altda_deploy_config["use_altda"] = false;
     altda_deploy_config["da_type"] = dataAvailability.da_type;
-    altda_deploy_config["batch_submission_frequency"] = dataAvailability.da_batch_submission_frequency;
+    altda_deploy_config["da_batch_submission_frequency"] = dataAvailability.da_batch_submission_frequency;
     
     if (altda_deploy_config["da_type"] === "custom") {
       // No da provider and alt da enabled if using custom
